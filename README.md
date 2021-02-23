@@ -46,7 +46,7 @@ https://docs.microsoft.com/es-es/dotnet/csharp/programming-guide/concepts/linq/i
 
 La cláusula from especifica el origen de datos, la cláusula where aplica el filtro y la cláusula select especifica el tipo de los elementos devueltos. 
 
-```
+
  
  ### Ordering
  
