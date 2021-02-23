@@ -114,7 +114,7 @@ var media = alumnos.Average(x => x.Nota);
 
 ```
 
-# All/Any
+### All/Any
 
 Con este último operador, vamos a poder comprobar si todos o alguno de los valores de la colección cumplen el criterio que le indiquemos
 
