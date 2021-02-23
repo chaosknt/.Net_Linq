@@ -67,6 +67,46 @@ documentacion: https://docs.microsoft.com/es-es/dotnet/csharp/programming-guide/
 
 # Examples 
 
+doc: https://www.campusmvp.es/recursos/post/introduccion-rapida-a-linq-con-c-sharp.aspx
+
+## First/Last
+Esta extensión nos va a permitir obtener respectivamente el primer y el último objeto de la colección. Esto es especialmente útil si la colección está ordenada.
+
+```
+ var primero = alumnos.First();
+var ultimo = alumnos.Last();
+
+```
+
+### Sum
+nos va a permitir sumar la colección
+
+```
+var sumaNotas = alumnos.Sum(x => x.Nota);
+   
+```
+
+### Max/Min
+
+obtener los valores máximo y mínimo de la colección
+
+```
+var notaMaxima = alumnos.Max(x => x.Nota);
+var notaMinima = alumnos.Min(x => x.Nota);
+   
+```
+
+### Average
+
+Este método nos va a devolver la media aritmética de los valores (numéricos) de los elementos que le indiquemos de la colección
+
+
+```
+var media = alumnos.Average(x => x.Nota);
+   
+```
+
+
 ### FindAsync
 
 ```
@@ -74,6 +114,16 @@ documentacion: https://docs.microsoft.com/es-es/dotnet/csharp/programming-guide/
 
 ```
 
+# All/Any
+
+Con este último operador, vamos a poder comprobar si todos o alguno de los valores de la colección cumplen el criterio que le indiquemos
+
+
+```
+ var todosAprobados = alumnos.All(x => x.Nota >= 5);
+var algunAprobado = alumnos.Any(x => x.Nota >= 5);
+
+```
 
 ### FirstOrDefault
 
