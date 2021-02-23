@@ -104,6 +104,15 @@ var usuario =  _context.Usuarios.FirstOrDefaultAsync(m => m.Id == id);
 ```
 reservas = _context.Reservas.Include(r => r.Cliente).Include(r => r.Funcion).Include(r => r.Funcion.Pelicula).ToList();
 ```
+### Include + Where
+
+```
+  var reservas = _context.Reservas.Where(r => r.Funcion.PeliculaId == model.PeliculaId)
+                                            .Where(r => r.Funcion.Fecha >= model.Desde)
+                                            .Where(r => r.Funcion.Fecha <= model.Hasta)
+                                            .Include(r => r.Funcion.Sala.TipoSala).ToList();
+```
+
 
 ### Using navigational properties
 
